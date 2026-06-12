@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Компонент Loader (Task #4) відповідає збереженому snapshot (зліпку) 1`] = `
+<DocumentFragment>
+  <div
+    class="loaderContainer"
+  >
+    <div
+      class="spinner"
+    />
+    <span>
+      Завантаження даних...
+    </span>
+  </div>
+</DocumentFragment>
+`;

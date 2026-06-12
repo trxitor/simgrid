@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CatalogPage from './pages/CatalogPage';
+import ProductDetailsPage from './pages/ProductDetailsPage';
+import NotFoundPage from './pages/NotFoundPage';
+import ErrorBoundary from './components/ErrorBoundary';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Згідно з Task #3 обертаємо весь додаток в ErrorBoundary
+    <ErrorBoundary>
+      <Router>
+        <Routes>
+          <Route path="/" element={<CatalogPage />} />
+          {/* Новий роут для пошуку згідно з Task #6 */}
+          <Route path="/search/:query" element={<CatalogPage />} />
+          <Route path="/product/:id" element={<ProductDetailsPage />} />
+          {/* Обробка невірних URL згідно з Task #6 */}
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Router>
+    </ErrorBoundary>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,150 @@
+export interface Product {
+  id: number;
+  title: string;
+  categoryName: string;
+  price: number;
+  description: string;
+  image: string;
+  specs: Record<string, string>;
+}
+
+export const mockProducts: Product[] = [
+  // --- SIM RACING (АВТОСИМУЛЯТОРИ) ---
+  {
+    id: 1,
+    title: 'Moza R9 V2 Direct Drive',
+    categoryName: 'Кермові бази',
+    price: 450,
+    description: 'Потужна база Direct Drive з крутним моментом 9 Нм. Забезпечує неймовірну деталізацію дороги. Ідеально підходить як для кіберспортивного сімрейсингу, так і для тривалих атмосферних рейсів у World of Trucks.',
+    image: 'https://placehold.co/600x400/2b2b2b/ffffff?text=Moza+R9+V2',
+    specs: { 'Крутний момент': '9 Нм', 'Матеріал': 'Авіаційний алюміній', 'Охолодження': 'Пасивне', 'Сумісність': 'PC' }
+  },
+  {
+    id: 2,
+    title: 'Fanatec CSL DD (8 Nm)',
+    categoryName: 'Кермові бази',
+    price: 500,
+    description: 'Золотий стандарт початкового Direct Drive. Версія з Boost Kit на 8 Нм розкриває весь потенціал технології TRUEFORCE. Плавна робота без ремінних або шестеренних втрат.',
+    image: 'https://placehold.co/600x400/2b2b2b/ffffff?text=Fanatec+CSL+DD',
+    specs: { 'Крутний момент': '8 Нм', 'Технологія': 'Direct-Drive', 'Сумісність': 'PC / Xbox' }
+  },
+  {
+    id: 3,
+    title: 'Heusinkveld Sprint Pedals',
+    categoryName: 'Педалі',
+    price: 700,
+    description: 'Професійні педалі для симуляторів. Гальмо оснащене тензодатчиком (Load Cell), який витримує тиск до 120 кг, забезпечуючи ідеальну м\'язову пам\'ять при гальмуванні.',
+    image: 'https://placehold.co/600x400/2b2b2b/ffffff?text=Heusinkveld+Sprint',
+    specs: { 'Датчик гальма': 'Load Cell (120 кг)', 'Матеріал': 'CNC сталь', 'Налаштування': 'Повністю кастомні' }
+  },
+  {
+    id: 4,
+    title: 'Thrustmaster T-LCM',
+    categoryName: 'Педалі',
+    price: 230,
+    description: 'Магнітні педалі з тензодатчиком. Чудовий вибір для переходу з потенціометрів на Load Cell. У комплекті йде набір пружин для налаштування жорсткості.',
+    image: 'https://placehold.co/600x400/2b2b2b/ffffff?text=Thrustmaster+T-LCM',
+    specs: { 'Сенсори': 'H.E.A.R.T (магнітні)', 'Датчик гальма': '100 кг', 'Підключення': 'USB' }
+  },
+  {
+    id: 5,
+    title: 'Simagic Alpha Mini',
+    categoryName: 'Кермові бази',
+    price: 600,
+    description: 'Компактна, але надзвичайно потужна база на 10 Нм. Оснащена сучасним енкодером, який зчитує найменші зміни кута повороту.',
+    image: 'https://placehold.co/600x400/2b2b2b/ffffff?text=Simagic+Alpha+Mini',
+    specs: { 'Крутний момент': '10 Нм', 'Енкодер': '262144 ppr', 'Бездротове підключення керма': 'Так' }
+  },
+  {
+    id: 6,
+    title: 'Next Level Racing F-GT Lite',
+    categoryName: 'Кокпіти',
+    price: 300,
+    description: 'Складаний кокпіт, який дозволяє грати як у позиції Формули-1, так і в класичній позиції GT. Легко складається разом із закріпленим обладнанням.',
+    image: 'https://placehold.co/600x400/2b2b2b/ffffff?text=NLR+F-GT+Lite',
+    specs: { 'Тип': 'Складаний', 'Позиції': 'Formula / GT', 'Зріст пілота': '120-200 см' }
+  },
+  {
+    id: 7,
+    title: 'Logitech G PRO Racing Wheel',
+    categoryName: 'Кермові бази',
+    price: 1000,
+    description: 'Перший Direct Drive від Logitech. 11 Нм крутного моменту та фірмова технологія тактильної віддачі TRUEFORCE для повного занурення.',
+    image: 'https://placehold.co/600x400/2b2b2b/ffffff?text=Logitech+G+PRO',
+    specs: { 'Крутний момент': '11 Нм', 'Технологія': 'TRUEFORCE', 'Дисплей': 'LED-індикатори' }
+  },
+  {
+    id: 8,
+    title: 'Moza KS Steering Wheel',
+    categoryName: 'Керма (Баранки)',
+    price: 280,
+    description: 'Штурвал у стилі GT/LMP з карбоновим покриттям та програмованими RGB-кнопками. Має магнітні пелюстки перемикання передач.',
+    image: 'https://placehold.co/600x400/2b2b2b/ffffff?text=Moza+KS+Wheel',
+    specs: { 'Діаметр': '300 мм', 'Матеріал': 'Карбон / Гума', 'Кнопки': '10 RGB' }
+  },
+
+  // --- FLIGHT SIM (АВІАСИМУЛЯТОРИ) ---
+  {
+    id: 9,
+    title: 'Thrustmaster HOTAS Warthog',
+    categoryName: 'HOTAS (Авіа)',
+    price: 550,
+    description: 'Легендарна точна копія систем управління штурмовика A-10C. Виконана повністю з металу. Вибір хардкорних віртуальних пілотів.',
+    image: 'https://placehold.co/600x400/1c3144/ffffff?text=HOTAS+Warthog',
+    specs: { 'Матеріал': 'Метал', 'Сенсори': '3D Hall Effect', 'Кількість кнопок': '55' }
+  },
+  {
+    id: 10,
+    title: 'Honeycomb Alpha Flight Controls',
+    categoryName: 'Штурвали (Yoke)',
+    price: 280,
+    description: 'Професійний штурвал для цивільної авіації. Поворот на 180 градусів, плавний хід завдяки сталевому валу та вбудована панель перемикачів.',
+    image: 'https://placehold.co/600x400/1c3144/ffffff?text=Honeycomb+Alpha',
+    specs: { 'Обертання': '180°', 'Вал': 'Сталевий', 'Панель': 'Магнето, Батарея, Світло' }
+  },
+  {
+    id: 11,
+    title: 'Honeycomb Bravo Throttle',
+    categoryName: 'Блоки РУД',
+    price: 280,
+    description: 'Універсальний блок важелів управління двигунами. Підходить як для одномоторних Цессен, так і для чотиримоторних Боїнгів. Вбудована панель автопілота.',
+    image: 'https://placehold.co/600x400/1c3144/ffffff?text=Honeycomb+Bravo',
+    specs: { 'Важелі': '6 (змінні)', 'Автопілот': 'Повний блок', 'Шасі': 'Важіль з індикацією' }
+  },
+  {
+    id: 12,
+    title: 'Logitech G X56 H.O.T.A.S.',
+    categoryName: 'HOTAS (Авіа)',
+    price: 250,
+    description: 'Оновлений джойстик і РУД для сучасних космосимів та бойової авіації. 6 ступенів свободи (6DoF) та налаштовувана RGB підсвітка.',
+    image: 'https://placehold.co/600x400/1c3144/ffffff?text=Logitech+X56',
+    specs: { 'Осі': '6', 'Міні-стики': '2 аналогових', 'Підсвітка': 'RGB' }
+  },
+  {
+    id: 13,
+    title: 'Thrustmaster TPR Pendular Rudder',
+    categoryName: 'Авіаційні педалі',
+    price: 600,
+    description: 'Педалі з унікальним маятниковим механізмом Pendul_R. Забезпечують безпрецедентну плавність і точність, необхідну для пілотування гелікоптерів.',
+    image: 'https://placehold.co/600x400/1c3144/ffffff?text=TPR+Rudder',
+    specs: { 'Механізм': 'Маятниковий', 'Сенсори': 'Магнітні (H.E.A.R.T)', 'Матеріал': '100% метал' }
+  },
+  {
+    id: 14,
+    title: 'VKB Gladiator NXT EVO',
+    categoryName: 'Джойстики',
+    price: 160,
+    description: 'Еталон у середньому бюджеті. Модульна конструкція, безконтактні сенсори MaRS та високоякісні підшипники.',
+    image: 'https://placehold.co/600x400/1c3144/ffffff?text=VKB+Gladiator',
+    specs: { 'Сенсори': 'MaRS (безконтактні)', 'Модульність': 'Підтримка розширень', 'Осі': '3' }
+  },
+  {
+    id: 15,
+    title: 'VIRPIL VPC MongoosT-50CM3',
+    categoryName: 'Блоки РУД',
+    price: 370,
+    description: 'Топовий блок управління двигунами (РУД) з регульованими детентами, ідеальний для сучасних винищувачів у DCS World.',
+    image: 'https://placehold.co/600x400/1c3144/ffffff?text=VIRPIL+Throttle',
+    specs: { 'Детенти': 'Регульовані/Змінні', 'Кнопки': 'Більше 60', 'Осі': '6' }
+  }
+];
